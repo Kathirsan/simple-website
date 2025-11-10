@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breeze Entity Extractor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="ocean-breeze-theme">
+    <main class="container">
+        <h1>Entity Extractor 🌬️</h1>
+
+        <section class="input-section" aria-labelledby="paragraph-label">
+            <label id="paragraph-label" for="paragraph-input">Enter a paragraph of text</label>
+            <textarea id="paragraph-input" placeholder="Paste or type your text here..."></textarea>
+            <div class="actions">
+                <button id="extract-button" type="button" aria-label="Extract entities">Extract</button>
+                <span class="hint" aria-hidden="true">Ctrl + Enter to extract</span>
+            </div>
+        </section>
+
+        <section class="results" aria-label="Extracted Entities">
+            <div class="result-card" data-entity="emails">
+                <h2>Emails 📧</h2>
+                <div id="emails-output" class="output empty-state">None found.</div>
+            </div>
+            <div class="result-card" data-entity="dates">
+                <h2>Dates 📅</h2>
+                <div id="dates-output" class="output empty-state">None found.</div>
+            </div>
+            <div class="result-card" data-entity="times">
+                <h2>Times ⏰</h2>
+                <div id="times-output" class="output empty-state">None found.</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
